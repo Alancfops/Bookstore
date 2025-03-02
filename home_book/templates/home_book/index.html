@@ -1,44 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Página</title>
-    <!-- Carregue o Tailwind CSS do seu projeto Django -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Django ecommerce</title>
     {% load static %}
-    <link href="{% static 'css/dist/styles.css' %}" rel="stylesheet">
-</head>
-<body class="bg-gray-100 dark:bg-gray-900">
+    <link href="{% static 'css/dist/styles.css' %}" rel="stylesheet" />
+  </head>
+  <body>
     <nav class="bg-white border-gray-200 dark:bg-gray-900">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <div class="flex items-center space-x-3 rtl:space-x-reverse">
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Meu livro</span>
-            </div>
-            <div class="flex md:order-2">
-                <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Fazer Login</button>
-            </div>
-            <div class="items-center justify-between w-full md:flex md:w-auto md:order-1">
-                <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                    <li>
-                        <a href="#" class="block py-2 px-3 md:p-0 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:dark:text-blue-500" aria-current="page">Inicio</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Estante</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Loja</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Perfil</a>
-                    </li>
-                </ul>
-            </div>
+      <div
+        class="max-w-screen-xl flex items-center justify-between mx-auto p-4"
+      >
+        <div class="flex items-center space-x-3">
+          <span class="self-center text-2xl font-semibold text-white"
+            >Meu livro</span
+          >
         </div>
+        <div class="flex md:order-2">
+          <button
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700"
+          >
+            Fazer Login
+          </button>
+        </div>
+        <div
+          class="items-center justify-between w-full md:flex md:w-auto md:order-1"
+        >
+          <ul
+            class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:dark:text-blue-500"
+                aria-current="page"
+                >Inicio</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >Estante</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >Loja</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >Perfil</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
-
-    <div class="container mx-auto p-4">
-        <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Teste de cores(Nao ligue)</h1>
-        <p class="text-gray-700 dark:text-gray-300">Teste de cores(Ignore).</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+      <div
+        class="max-w-xs mx-auto mt-10 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+      >
+        <a href="#">
+          <img
+            class="rounded-t-lg w-full h-48 object-cover"
+            src="https://martinsfontespaulista.vteximg.com.br/arquivos/ids/310290-800-800/845394_ampliada.jpg?v=637254233532170000"
+            alt=""
+          />
+        </a>
+        <div class="p-6">
+          <a href="#">
+            <h5
+              class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
+              Do atomo ao buraco negro
+            </h5>
+          </a>
+          <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">
+            é um livro que explica de forma didática como funcionam os objetos astronômicos, 
+            desde os átomos até os buracos negros. 
+            O livro foi escrito pelo youtuber e divulgador científico Schwarza e publicado pela editora Ouro Planeta em 2018. </p>
+          <a
+            href="#"
+            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-700"
+          >
+            Saiba Mais
+          </a>
+        </div>
+      </div>
+      <div
+        class="max-w-xs mx-auto mt-10 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+      >
+        <a href="#">
+          <img
+            class="rounded-t-lg w-full h-48 object-cover"
+            src="https://m.media-amazon.com/images/I/71JpZHEGvWL._SY425_.jpg"
+            alt=""
+          />
+        </a>
+        <div class="p-6">
+          <a href="#">
+            <h5
+              class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
+              Codigo Limpo
+            </h5>
+          </a>
+          <p class="mb-4 font-normal text-gray-700 dark:text-gray-400"> 
+            Código Limpo é um livro de engenharia de software, escrito por Robert C. Martin, 
+            que busca ensinar a escrever um código limpo e legível. 
+            O livro foi publicado pela editora Prentice Hall em 2008. </p>
+          </p>
+          <a
+            href="#"
+            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-700"
+          >
+            Saiba Mais
+          </a>
+        </div>
+      </div>
+      <div
+        class="max-w-xs mx-auto mt-10 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+      >
+        <a href="#">
+          <img
+            class="rounded-t-lg w-full h-48 object-cover"
+            src="https://m.media-amazon.com/images/I/51hk-fjdzAL._SY445_SX342_.jpg"
+            alt=""
+          />
+        </a>
+        <div class="p-6">
+          <a href="#">
+            <h5
+              class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
+              Pririoneiros da mente
+            </h5>
+          </a>
+          <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">
+            O livro narra a história de Theo Fester um megaempresário do Vale do Silício que, ao descobrir uma doença mortal, 
+            passa a questionar a sua vida. Nessas suas reflexões, ele descobre que falhou com os filhos. 
+            Para a sua mudança, Theo e seus filhos serão ajudados por Marco Polo um psiquiatra muito inteligente.
+          </p>
+          <a
+            href="#"
+            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-700"
+          >
+            Saiba Mais
+          </a>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
