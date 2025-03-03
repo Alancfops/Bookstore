@@ -1,6 +1,6 @@
 .PHONY: runserver migrate makemigrations run-migrate
 
-PYTHON = python
+PYTHON = python3
 MANAGE = $(PYTHON) manage.py
 
 runserver:
