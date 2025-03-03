@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "tailwind",
     "theme",
     "home_book",
+    "books_products",
 ]
 
 TAILWIND_APP_NAME = "theme"

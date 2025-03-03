@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details Book</title>
+    {% load static %}
+    <link href="{% static 'css/dist/styles.css' %}" rel="stylesheet">
+</head>
+<body>
+
+    {% include 'home_book/navbar.html' %}
+
+    <div class="container mx-auto p-4">
+        <h1 class="text-2xl font-bold text-center mt-10">Detalhes do Livro</h1>
+        <div class="flex flex-col md:flex-row mt-10">
+            <div class="md:w-1/3">
+                <img class="rounded-lg w-ful h-auto" 
+                src="https://martinsfontespaulista.vteximg.com.br/arquivos/ids/310290-800-800/845394_ampliada.jpg?v=637254233532170000" 
+                alt="">    
+            </div>
+            <div class="md:w-2/3 md:pl-8 mt-6 md:mt-0">
+                <h2 class="text-3xl font-bold text-gray-900">
+                    Do átomo ao buraco negro
+                </h2>
+                <p class="text-gray-600 mt-2">Autor: Schwarza</p>
+                <p class="text-gray-700 mt-4">
+                    Este livro explica de forma didática como funcionam os objetos astronômicos,desde os átomos até os buracos negros. 
+                    Escrito pelo youtuber e divulgador científico Schwarza, o livro foi publicado pela editora Planeta em 2018.
+                </p>
+                <p class="text-2x1 text-gray-900 mt-4">R$ 49,90</p>
+                <button class="mt-6 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-700">
+                    Adicionar ao carrinho
+                </button>
+            </div>
+        </div>
+    </div>
+
+    {% include 'home_book/footer.html' %}
+
+</body>
+</html>
